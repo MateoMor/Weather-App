@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/3d-weather-icon-day-with-rain-free-png.webp" />
+    <title>Weather</title>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@googlemaps/extended-component-library@0.6"
+    ></script>
+
+    <script defer src="index.js"></script>
+
+    <!-- Load the API from the specified URL -->
+    <!-- Async permite que la API de google maps se cargue de manera asincrona, con esto las funciones que depeneden de la api de google funcionan corrctamente -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM33nsX09CKNMGbsB5RJdToNNwXbOsm6Q&loading=async&libraries=places&callback=initAutocomplete"
+    ></script>
+  </head>
+  <body>
+    <main class="main">
+        <header class="header">  
+        </header>
+      <h1>Enter a location</h1>
+        <input
+          type="text"
+          id="autocomplete"
+          class="autocomplete"
+          placeholder="Ingrese un lugar"
+        />
+        <strong class="info_section"></strong>
+      <div class="map_container"><div id="map"></div></div>
+    </main>
+  </body>
+</html>
